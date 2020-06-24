@@ -20,7 +20,7 @@ class Ejemplar (models.Model):
     localiz = models.CharField(max_length = 20)
     libro = models.ForeignKey('Libro', on_delete= models.CASCADE, null = False)
     def __str__(self):
-        return str (self.localiz + "" + self.libro.nombre)
+        return str (self.localiz + "" + self.libro.titulo)
 
 
 class Usuario (models.Model):
